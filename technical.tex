@@ -25,9 +25,9 @@ also it will be possible to move at least few meter the rack from the SCP, with 
   \subsection{Explanation}
     The above diagram represents the concept of the "always-on" connections to be implemented. 
     The idea is to have a pair of interfaces in the ACI border leafs pre-configured and always cabled up for this purpose, each pair of interfaces connect to the Service Connection Points (SCP) in such way that the switches used for integration at Level 3 can physically roam around the floor and the engineers working in the area can get the connection back online only by moving the fibers to the exact same ports in the next SCP. 
-    The diagram shows only 1 switch but this can scale up to 3 switches with redundant fiber connections: 3 redundant connection equals to 6 fiber pairs, 12 fibers, 1 connection plate inside the SCP, either single or multi-mode). 
-  
-    For network connections you will want to use single-mode all the time to future proof the install in case of special integration requirements that ask for more bandwidth (e.g. it's technically feasible to install a leaf switch in level 3 with 100G connections using BiDi 100G QSFPs with LC connectors) but multi-mode is good for 10G as well, it depends on the use case, in fact the multi-mode fiber was considered "just in case" since some subsystems use multi-mode for private point-to-point connections which may end up being integrated at Level 3 first before moving to its definitive location; in the diagram these special connections are pictured as a non-redundant point-to-point connection using a OM3 full-duplex fiber.
+    The diagram shows only 1 switch but there will be installed one Kit ( i.e. Mobile Rack, Gigabit Switch, UPS, PDU and Reel asembly) per SCP
+    For network connections you will want to use single-mode all the time to future proof the install in case of special integration requirements that ask for more bandwidth
+
 
     Some relevant points to have in consideration for the implementation:
     \begin{itemize}
@@ -36,7 +36,6 @@ also it will be possible to move at least few meter the rack from the SCP, with 
       \item Label everything properly and provide the non-IT engineers with specific instructions for moving a switch from one SCP to another.
     \end{itemize}
 
-    \textbf{Note}: Due to the physical location of the SCPs this is unlikely, but possible. do not underestimate logical/creative/symmetrical thinking.
  \newpage
 \section{Bill of Materials}
 
